@@ -26,5 +26,5 @@ client.on("message", function(message) {
 });                                      
 
 
-console.log("Token: ..."process.env.BOT_TOKEN.slice(-10));
+console.log("Token: ..."+process.env.BOT_TOKEN.slice(-10));
 client.login(process.env.BOT_TOKEN);
