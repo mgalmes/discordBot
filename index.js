@@ -31,7 +31,7 @@ client.on("message", function(message) {
   } else if (command === "debug" && debug) {
     if (args[0]=="eval") {
       try {
-        message.reply(JSON.stringify(eval(args.slice(1).join(" "))))
+        message.reply("R:"+JSON.stringify(eval(args.slice(1).join(" "))))
       } catch(e) {
         console.error(e);
         message.reply("Error executing command. Check log for details...");
@@ -42,5 +42,5 @@ client.on("message", function(message) {
 
 
 console.log("Token: ..."+process.env.BOT_TOKEN.slice(-10));
-console.log("Degug: "+debug);
+console.log("Debug: "+debug);
 client.login(process.env.BOT_TOKEN);
